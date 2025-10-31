@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryData = {
         "Sayuran": {
             id: { products: ["BAYAM HIJAU","BEETROOT","BROKOLI","BUNCIS","BUNCIS BABY","DAUN KEMANGI","DAUN PANDAN","DAUN PISANG","DAUN SELEDRI","DAUN SINGKONG","EDAMAME","HORENSO","JAGUNG ACAR","JAGUNG MANIS KULIT","JAGUNG MANIS KUPAS","JAMUR CHAMPIGNON","JAMUR ENOKI","JAMUR KUPING BASAH","JAMUR SHIMEJI COKELAT","JAMUR TIRAM","JAMUR LIMAU","KACANG PANJANG","KACANG TANAH","KAILAN BABY","KANGKUNG","KEMBANG KOL","KENTANG BABY","KENTANG DIENG","KOL PUTIH","KOL UNGU","KUCAI","LABU SIAM","LABU SIAM ACAR","LOBAK PUTIH","OYONG","PAKCOY (REG/ORGANIC)","PAPRIKA (MERAH/HIJAU)","PARE","PARSLEY","SAWI HIJAU","SAWI PUTIH","SELADA KERITING","SELADA ROMAINE HIJAU","SELEDRI STICK","TAUGE","TERONG UNGU","TIMUN","TIMUN JEPANG","TOMAT MERAH","UBI CILEMBU","UBI MERAH","UBI UNGU","WORTEL BABY","WORTEL BRASTAGI","WORTEL ORGANIK","ZUCCHINI"] },
-            en: { products: ["GREEN SPINACH","BEETROOT","BROCCOLI","GREEN BEANS","BABY GREEN BEANS","BASIL LEAVES","PANDAN LEAVES","BANANA LEAVES","CELERY LEAVES","CASSAVA LEAVES","EDAMAME","HORENSO (Japanese Spinach)","BABY CORN","SWEET CORN (with husk)","SWEET CORN (peeled)","CHAMPIGNON MUSHROOM","ENOKI MUSHROOM","WOOD EAR MUSHROOM (wet)","BROWN SHIMEJI MUSHROOM","OYSTER MUSHROOM","LIME MUSHROOM? (Verify name)","LONG BEANS","PEANUTS","BABY KALE","WATER SPINACH","CAULIFLOWER","BABY POTATOES","DIENG POTATOES","WHITE CABBAGE","RED CABBAGE","CHIVES","CHAYOTE","PICKLED CHAYOTE","DAIKON RADISH","LUFFA","PAK CHOY (REG/ORGANIC)","BELL PEPPER (RED/GREEN)","BITTER MELON","PARSLEY","MUSTARD GREENS","NAPA CABBAGE","CURLY LETTUCE","GREEN ROMAINE LETTUCE","CELERY STICK","BEAN SPROUTS","PURPLE EGGPLANT","CUCUMBER","JAPANESE CUCUMBER","RED TOMATO","CILEMBU SWEET POTATO","RED SWEET POTATO","PURPLE SWEET POTATO","BABY CARROT","BRASTAGI CARROT","ORGANIC CARROT","ZUCCHINI"] }
+            en: { products: ["GREEN SPINACH","BEETROOT","BROCCOLI","GREEN BEANS","BABY GREEN BEANS","BASIL LEAVES","PANDAN LEAVES","BANANA LEAVES","CELERY LEAVES","CASSAVA LEAVES","EDAMAME","HORENSO (Japanese Spinach)","BABY CORN","SWEET CORN (with husk)","SWEET CORN (peeled)","CHAMPIGNON MUSHROOM","ENOKI MUSHROOM","WOOD EAR MUSHROOM (wet)","BROWN SHIMEJI Mushroom","OYSTER MUSHROOM","LIME MUSHROOM? (Verify name)","LONG BEANS","PEANUTS","BABY KALE","WATER SPINACH","CAULIFLOWER","BABY POTATOES","DIENG POTATOES","WHITE CABBAGE","RED CABBAGE","CHIVES","CHAYOTE","PICKLED CHAYOTE","DAIKON RADISH","LUFFA","PAK CHOY (REG/ORGANIC)","BELL PEPPER (RED/GREEN)","BITTER MELON","PARSLEY","MUSTARD GREENS","NAPA CABBAGE","CURLY LETTUCE","GREEN ROMAINE LETTUCE","CELERY STICK","BEAN SPROUTS","PURPLE EGGPLANT","CUCUMBER","JAPANESE CUCUMBER","RED TOMATO","CILEMBU SWEET POTATO","RED SWEET POTATO","PURPLE SWEET POTATO","BABY CARROT","BRASTAGI CARROT","ORGANIC CARROT","ZUCCHINI"] }
         },
         "Herbs & Spices": {
             id: { products: ["BAWANG BOMBAY","BAWANG MERAH","BAWANG PUTIH (REG/KATING)","BIJI PALA","CABAI HIJAU BESAR","CABAI HIJAU KERITING","CABAI MERAH BESAR","CABAI MERAH KERITING","CABAI RAWIT HIJAU","CABAI RAWIT MERAH","CENGKEH","DAUN BASIL","DAUN JERUK (REG/ORGANIK)","DAUN SALAM","JAHE GAJAH","JAHE PUTIH","JINTEN","KAPULAGA","KAYU MANIS","KENCUR","KUNYIT","LADA HITAM UTUH","LADA PUTIH UTUH","LENGKUAS","RASEDA ASAM JAWA","SEREH"] },
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // ===== OBJEK TRANSLATIONS =====
+    // ===== OBJEK TRANSLATIONS (DENGAN TAMBAHAN) =====
     const translations = {
         'id': {
             navHome: 'Beranda', navProducts: 'Produk', navAbout: 'Tentang', navContact: 'Kontak',
@@ -40,14 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
             contactWhatsApp: 'Hubungi via WhatsApp',
             contactEmail: 'Kirim Email',
             footerText: 'Kualitas Terpercaya, Diantar Dengan Penuh Kepedulian.',
-            // Kontak Kiri (Info)
             contactInfoTitle: 'Informasi Kontak',
             contactAddressTitle: 'Alamat:',
             contactAddressText: 'Citra Sentul Raya,<br>Bogor, Jawa Barat, 16810',
             contactPhoneTitle: 'Telepon:',
             contactEmailTitle: 'Email:',
             contactSocialTitle: 'Media Sosial:',
-            // Kontak Kanan (Form - Placeholder Model)
             contactFormTitleAlt: 'Butuh Bantuan? Hubungi Kami',
             contactFormDescAlt: 'Isi formulir di bawah ini dan tim kami akan segera menghubungi anda.',
             formNamePlaceholder: 'Nama Anda',
@@ -55,23 +53,28 @@ document.addEventListener('DOMContentLoaded', () => {
             formEmailPlaceholder: 'Email Anda',
             formMessagePlaceholder: 'Pesan Anda',
             formSend: 'Kirim Pesan',
-            // Modal Kategori
             modalProductsTitle: 'Produk Tersedia:',
             modalCTA: 'Minta Penawaran untuk Kategori Ini',
-            // Modal Detail Produk
             productDetailCTA: 'Minta Penawaran Produk Ini',
-            // Nama Kategori (Kartu & Judul Modal)
             categoryVegetables: 'Sayuran',
             categoryHerbs: 'Rempah & Bumbu',
             categoryFruits: 'Buah-buahan',
             categoryStaples: 'Bahan Pangan Lain',
             categoryFrozen: 'Makanan Beku',
-             // Deskripsi Kategori Spesifik untuk Modal
-             modalSayuranDesc: 'Pilihan sayuran terbaik untuk hidangan sehat Anda, dikurasi dari sumber lokal terpercaya.',
-             modalHerbsDesc: 'Ragam bumbu segar yang menambah aroma dan cita rasa alami, dipilih untuk meningkatkan kualitas setiap hidangan.',
-             modalBuahDesc: 'Buah segar penuh vitamin untuk setiap momen, dipetik pada tingkat kematangan optimal untuk rasa terbaik.',
-             modalPanganDesc: 'Kacang, telur, tahu, tempe, dan bahan pokok berkualitas lainnya untuk melengkapi kebutuhan dapur Anda.',
-             modalFrozenDesc: 'Solusi cepat untuk hidangan praktis dan lezat, dibuat dari bahan berkualitas dan diproses secara higienis.'
+            modalSayuranDesc: 'Pilihan sayuran terbaik untuk hidangan sehat Anda, dikurasi dari sumber lokal terpercaya.',
+            modalHerbsDesc: 'Ragam bumbu segar yang menambah aroma dan cita rasa alami, dipilih untuk meningkatkan kualitas setiap hidangan.',
+            modalBuahDesc: 'Buah segar penuh vitamin untuk setiap momen, dipetik pada tingkat kematangan optimal untuk rasa terbaik.',
+            modalPanganDesc: 'Kacang, telur, tahu, tempe, dan bahan pokok berkualitas lainnya untuk melengkapi kebutuhan dapur Anda.',
+            modalFrozenDesc: 'Solusi cepat untuk hidangan praktis dan lezat, dibuat dari bahan berkualitas dan diproses secara higienis.',
+            formInquiryDefaultProduct: 'Halo, saya tertarik untuk meminta penawaran produk berikut: ',
+            formInquiryDefaultCategory: 'Halo, saya tertarik untuk meminta penawaran untuk kategori produk berikut: ',
+            formErrorRequired: 'Harap isi semua bidang yang wajib diisi.',
+            formErrorEmail: 'Harap masukkan alamat email yang valid.',
+            formSending: 'Mengirim...',
+            formSuccess: 'Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda.',
+            formErrorServer: 'Maaf, terjadi kesalahan. Silakan coba lagi nanti.',
+            // KUNCI BARU
+            modalSearchPlaceholder: 'Cari produk di kategori ini...'
         },
         'en': {
             navHome: 'Home', navProducts: 'Products', navAbout: 'About', navContact: 'Contact',
@@ -87,14 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
             contactWhatsApp: 'Contact via WhatsApp',
             contactEmail: 'Send Email',
             footerText: 'Trusted Quality, Delivered With Care.',
-            // Kontak Kiri (Info)
             contactInfoTitle: 'Contact Information',
             contactAddressTitle: 'Address:',
             contactAddressText: 'Citra Sentul Raya,<br>Bogor, West Java, 16810',
             contactPhoneTitle: 'Phone:',
             contactEmailTitle: 'Email:',
             contactSocialTitle: 'Social Media:',
-            // Kontak Kanan (Form - Placeholder Model)
             contactFormTitleAlt: 'Need Help? Contact Us',
             contactFormDescAlt: 'Fill out the form below and our team will contact you shortly.',
             formNamePlaceholder: 'Your Name',
@@ -102,23 +103,28 @@ document.addEventListener('DOMContentLoaded', () => {
             formEmailPlaceholder: 'Your Email',
             formMessagePlaceholder: 'Your Message',
             formSend: 'Send Message',
-            // Modal Kategori
             modalProductsTitle: 'Available Products:',
             modalCTA: 'Request Quote for This Category',
-            // Modal Detail Produk
             productDetailCTA: 'Request Quote for This Product',
-            // Nama Kategori
             categoryVegetables: 'Vegetables',
             categoryHerbs: 'Herbs & Spices',
             categoryFruits: 'Fruits',
             categoryStaples: 'Other Staples',
             categoryFrozen: 'Frozen Food',
-             // Deskripsi Kategori Spesifik untuk Modal
-             modalSayuranDesc: 'The best selection of vegetables for your healthy dishes, curated from trusted local sources.',
-             modalHerbsDesc: 'A variety of fresh seasonings adding natural aroma and flavor, selected to enhance the quality of every dish.',
-             modalBuahDesc: 'Fresh fruits full of vitamins for every moment, picked at optimal ripeness for the best flavor.',
-             modalPanganDesc: 'Quality nuts, eggs, tofu, tempeh, and other staple foods to complete your kitchen needs.',
-             modalFrozenDesc: 'A quick solution for practical and delicious meals, made from quality ingredients and processed hygienically.'
+            modalSayuranDesc: 'The best selection of vegetables for your healthy dishes, curated from trusted local sources.',
+            modalHerbsDesc: 'A variety of fresh seasonings adding natural aroma and flavor, selected to enhance the quality of every dish.',
+            modalBuahDesc: 'Fresh fruits full of vitamins for every moment, picked at optimal ripeness for the best flavor.',
+            modalPanganDesc: 'Quality nuts, eggs, tofu, tempeh, and other staple foods to complete your kitchen needs.',
+            modalFrozenDesc: 'A quick solution for practical and delicious meals, made from quality ingredients and processed hygienically.',
+            formInquiryDefaultProduct: 'Hello, I am interested in requesting a quote for the following product: ',
+            formInquiryDefaultCategory: 'Hello, I am interested in requesting a quote for the following product category: ',
+            formErrorRequired: 'Please fill out all required fields.',
+            formErrorEmail: 'Please enter a valid email address.',
+            formSending: 'Sending...',
+            formSuccess: 'Thank you! Your message has been sent. We will contact you shortly.',
+            formErrorServer: 'Sorry, an error occurred. Please try again later.',
+            // KUNCI BARU
+            modalSearchPlaceholder: 'Search products in this category...'
         }
     };
 
@@ -132,21 +138,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (translations[lang] && translations[lang][key]) {
                 const translationText = translations[lang][key];
 
-                // Jika elemen adalah input/textarea DAN key adalah placeholder
                 if ((el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') && key.endsWith('Placeholder')) {
-                    el.placeholder = translationText; // Langsung set placeholder
+                    el.placeholder = translationText;
                 }
-                // Jika elemen adalah <p> untuk alamat
                 else if (key === 'contactAddressText') {
-                    el.innerHTML = translationText; // Gunakan innerHTML untuk <br>
+                    el.innerHTML = translationText;
                 }
-                // Untuk elemen teks lainnya (H1, H2, H3, P, A, SPAN, BUTTON dll)
-                // Kecuali Input/Textarea yang bukan placeholder
                 else if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') {
                     el.textContent = translationText;
                 }
 
-            } else { // Fallback language logic (jika terjemahan tidak ditemukan)
+            } else { 
                 const fallbackLang = lang === 'en' ? 'id' : 'en';
                 if (translations[fallbackLang] && translations[fallbackLang][key]) {
                     const fallbackText = translations[fallbackLang][key];
@@ -158,20 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
                        el.textContent = fallbackText;
                     }
                 } else {
-                   // Hanya tampilkan warning jika key bukan placeholder
                    if (!key.endsWith('Placeholder')) {
                        console.warn(`Translation key "${key}" not found in any language.`);
-                       // Kosongkan teks jika key tidak ada sama sekali (opsional)
-                       // if(el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') el.textContent = '';
-                       // if(el.placeholder) el.placeholder = '';
                    } else {
-                       // Kosongkan placeholder jika key placeholder tidak ada
                        if (el.placeholder) el.placeholder = '';
                    }
                 }
             }
         });
-        // Update atribut lang di tag <html> dan teks tombol bahasa
         document.documentElement.lang = lang;
         const currentLangText = document.getElementById('currentLangText');
         if(currentLangText) currentLangText.textContent = lang.toUpperCase();
@@ -199,11 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const selectedLang = option.getAttribute('data-lang');
                 if (selectedLang === currentLang) { langDropdown.classList.remove('active'); return; }
                 currentLang = selectedLang;
-                translatePage(currentLang); // Panggil fungsi terjemahan
-                langDropdown.classList.remove('active'); // Tutup dropdown
+                translatePage(currentLang);
+                langDropdown.classList.remove('active');
             });
         });
-        // Tutup dropdown jika klik di luar
         document.addEventListener('click', (e) => {
              if (langDropdown && langDropdown.classList.contains('active') && !langBtnTrigger.contains(e.target) && !langDropdown.contains(e.target)) {
                 langDropdown.classList.remove('active');
@@ -216,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMobile = document.querySelector('.nav-mobile');
     if (menuToggle && navMobile) {
         menuToggle.addEventListener('click', () => { navMobile.classList.toggle('active'); menuToggle.classList.toggle('open'); });
-        // Tutup nav mobile saat link di dalamnya diklik
         document.querySelectorAll('.nav-mobile a').forEach(link => {
             link.addEventListener('click', () => { navMobile.classList.remove('active'); menuToggle.classList.remove('open'); });
         });
@@ -230,29 +224,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryModal = document.getElementById('categoryModal');
     const productDetailModal = document.getElementById('productDetailModal');
 
+    // ===== BARU: Menutup Modal dengan Tombol Escape =====
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (categoryModal && categoryModal.style.display === 'flex') {
+                categoryModal.style.display = 'none';
+            }
+            if (productDetailModal && productDetailModal.style.display === 'flex') {
+                productDetailModal.style.display = 'none';
+            }
+        }
+    });
+
     // Hanya jalankan logika modal jika elemen modal ditemukan
     if (categoryModal && productDetailModal) {
         const modalTitle = document.getElementById('modalTitle');
         const modalDesc = document.getElementById('modalDesc');
         const modalProductList = document.getElementById('modalProductList');
         const closeModal = document.getElementById('closeModal');
-        const modalCTA = categoryModal.querySelector('.modal-cta');
+        const modalCTA = document.getElementById('categoryModalCTA');
+        // MODIFIKASI: Ambil elemen pencarian
+        const modalSearchInput = document.getElementById('modalSearchInput');
 
         const productDetailClose = document.getElementById('productDetailClose');
         const productDetailImage = document.getElementById('productDetailImage');
         const productDetailTitle = document.getElementById('productDetailTitle');
-        const productDetailCTA = productDetailModal.querySelector('.modal-cta');
+        const productDetailCTA = document.getElementById('productDetailModalCTA');
 
         // Event listener untuk kartu kategori
         document.querySelectorAll('.product-card').forEach(card => {
             card.addEventListener('click', () => {
-                const category = card.dataset.category; // Nama kategori mentah (misal "Sayuran")
-                const categoryProductsData = categoryData[category]; // Data produk dari categoryData
-                const currentTranslationData = translations[currentLang]; // Data terjemahan bahasa saat ini
+                // MODIFIKASI: Reset bilah pencarian saat modal dibuka
+                if (modalSearchInput) modalSearchInput.value = '';
+
+                const category = card.dataset.category; 
+                const categoryProductsData = categoryData[category];
+                const currentTranslationData = translations[currentLang];
 
                 if (categoryProductsData && currentTranslationData) {
 
-                    // Update Judul Modal Kategori
                     let titleKey;
                     if (category === 'Sayuran') titleKey = 'categoryVegetables';
                     else if (category === 'Herbs & Spices') titleKey = 'categoryHerbs';
@@ -261,19 +271,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     else if (category === 'Frozen Food') titleKey = 'categoryFrozen';
 
                     if (titleKey) {
-                        modalTitle.setAttribute('data-lang-key', titleKey); // Set key untuk fungsi translatePage nanti
+                        modalTitle.setAttribute('data-lang-key', titleKey);
                         if (currentTranslationData[titleKey]) {
                            modalTitle.textContent = currentTranslationData[titleKey];
-                        } else { // Fallback jika key tidak ada
+                        } else {
                            const fallbackLang = currentLang === 'en' ? 'id' : 'en';
                            modalTitle.textContent = translations[fallbackLang]?.[titleKey] || category;
                         }
-                    } else { // Fallback jika kategori tidak dikenal
+                    } else {
                         modalTitle.removeAttribute('data-lang-key');
                         modalTitle.textContent = category;
                     }
 
-                    // Update Deskripsi Modal Kategori
                     let descKey;
                     if (category === 'Sayuran') descKey = 'modalSayuranDesc';
                     else if (category === 'Herbs & Spices') descKey = 'modalHerbsDesc';
@@ -288,60 +297,48 @@ document.addEventListener('DOMContentLoaded', () => {
                         console.warn(`Modal description key "${descKey}" not found for language "${currentLang}".`);
                     }
 
-                    modalProductList.innerHTML = ''; // Kosongkan list produk sebelumnya
+                    modalProductList.innerHTML = ''; 
 
-                    // Ambil list produk ID untuk nama file
                     const productListForFilenames = categoryProductsData.id.products;
-                    // Ambil list produk sesuai bahasa untuk tampilan
                     const productListForDisplay = categoryProductsData[currentLang]?.products || productListForFilenames;
 
-                    // Validasi panjang array (opsional tapi bagus)
                     if (productListForFilenames.length !== productListForDisplay.length) {
                         console.warn("Product list length mismatch for category:", category, " - using ID names for display.");
-                        // Jika jumlah tidak cocok, mungkin lebih aman pakai nama ID untuk display juga
-                        // productListForDisplay = productListForFilenames; // Uncomment ini jika perlu fallback
                     }
 
-                    // Loop melalui produk (berdasarkan list ID)
                     productListForFilenames.forEach((productNameID, index) => {
                         const item = document.createElement('div');
                         item.classList.add('modal-product-item');
 
-                        // Membuat nama folder
                         const folderName = category.toLowerCase().replace(/[\(\)\/& -]/g, '_').replace(/_+/g, '_');
-                        // Membuat nama file dari NAMA PRODUK ID (pastikan koma jadi titik)
                         const cleanProductNameID = productNameID.toLowerCase().replace(/[\(\)\/]/g, '').replace(/ /g, '_').replace(/,/g,'.');
                         const imgName = `${cleanProductNameID}.jpg`;
                         const imgPath = `assets/katalog/${folderName}/${imgName}`;
-
-                        // Ambil nama tampilan, fallback ke nama ID jika index tidak valid
                         const displayProductName = productListForDisplay[index] || productNameID;
 
-                        // Simpan data di elemen dataset untuk modal detail
                         item.dataset.imgSrc = imgPath;
-                        item.dataset.productName = displayProductName; // Simpan nama tampilan
+                        item.dataset.productName = displayProductName;
 
-                        // Set HTML untuk item produk
+                        // MODIFIKASI: Menambahkan loading="lazy" pada gambar
                         item.innerHTML = `
-                            <img src="${imgPath}" alt="${displayProductName}" onerror="this.style.backgroundColor='#eee'; this.removeAttribute('src'); this.alt='Image not found';">
+                            <img src="${imgPath}" alt="${displayProductName}" loading="lazy" onerror="this.style.backgroundColor='#eee'; this.removeAttribute('src'); this.alt='Image not found';">
                             <p>${displayProductName}</p>
                         `;
 
-                        // Event listener untuk membuka modal detail produk
                         item.addEventListener('click', (e) => {
-                            e.stopPropagation(); // Mencegah modal kategori tertutup
+                            e.stopPropagation();
                             const detailImgSrc = item.dataset.imgSrc;
                             const detailProductNameDisplay = item.dataset.productName;
                             productDetailImage.src = detailImgSrc;
-                            productDetailImage.alt = detailProductNameDisplay; // Set alt text
+                            productDetailImage.alt = detailProductNameDisplay;
                             productDetailTitle.textContent = detailProductNameDisplay;
-                            productDetailModal.style.display = 'flex'; // Tampilkan modal detail
+                            productDetailModal.style.display = 'flex';
                         });
 
-                        modalProductList.appendChild(item); // Tambahkan item ke grid
+                        modalProductList.appendChild(item);
                     });
 
-                    categoryModal.style.display = 'flex'; // Tampilkan modal kategori
+                    categoryModal.style.display = 'flex';
                 } else {
                     console.error("Product data or translation data not found for category:", category, currentLang);
                 }
@@ -349,96 +346,208 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Menutup modal kategori
-        closeModal.addEventListener('click', () => categoryModal.style.display = 'none');
+        closeModal.addEventListener('click', () => {
+            categoryModal.style.display = 'none';
+            if (modalSearchInput) modalSearchInput.value = ''; // Reset pencarian
+        });
         window.addEventListener('click', e => {
-            // Tutup hanya jika klik di luar area konten modal KATEGORI dan modal DETAIL tidak sedang aktif
             if (e.target === categoryModal && productDetailModal.style.display !== 'flex') {
                 categoryModal.style.display = 'none';
+                if (modalSearchInput) modalSearchInput.value = ''; // Reset pencarian
             }
         });
 
         // Menutup modal detail produk
         productDetailClose.addEventListener('click', () => { productDetailModal.style.display = 'none'; });
         window.addEventListener('click', e => {
-             // Tutup hanya jika klik di luar area konten modal DETAIL
             if (e.target === productDetailModal) {
                 productDetailModal.style.display = 'none';
             }
         });
 
-        // Handler Smooth scroll untuk Tombol CTA di kedua Modal
-        function handleModalCTAClick(e){
-            const href = this.getAttribute('href');
-             if (href.startsWith('#')) {
-                e.preventDefault();
-                const targetSection = document.querySelector(href);
-                if (targetSection) {
-                    // Hitung posisi target dengan offset navbar
-                    const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 70;
-                    const elementPosition = targetSection.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+        // ===== BARU: Logika Pencarian Modal =====
+        if (modalSearchInput && modalProductList) {
+            modalSearchInput.addEventListener('keyup', () => {
+                const searchTerm = modalSearchInput.value.toLowerCase();
+                const items = modalProductList.querySelectorAll('.modal-product-item');
+                
+                items.forEach(item => {
+                    const productName = item.querySelector('p').textContent.toLowerCase();
+                    // Cek apakah nama produk mengandung istilah pencarian
+                    if (productName.includes(searchTerm)) {
+                        item.classList.remove('hidden'); // Tampilkan jika cocok
+                    } else {
+                        item.classList.add('hidden'); // Sembunyikan jika tidak cocok
+                    }
+                });
+            });
+        }
 
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                    // Tutup kedua modal setelah scroll
-                    categoryModal.style.display = 'none';
-                    productDetailModal.style.display = 'none';
+        // Handler Smooth scroll DAN PRE-FILL FORM
+        function smoothScrollToContact(prefillMessage = "") {
+            const targetSection = document.querySelector('#contact');
+            const messageTextarea = document.getElementById('message');
+
+            if (targetSection) {
+                if (prefillMessage && messageTextarea) {
+                    messageTextarea.value = prefillMessage;
+                    messageTextarea.focus();
                 }
+                const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 70;
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                categoryModal.style.display = 'none';
+                productDetailModal.style.display = 'none';
             }
         }
-        // Pasang event listener ke tombol CTA jika ada
-        if (modalCTA) { modalCTA.addEventListener('click', handleModalCTAClick); }
-        if (productDetailCTA) { productDetailCTA.addEventListener('click', handleModalCTAClick); }
+
+        if (modalCTA) {
+            modalCTA.addEventListener('click', function(e) {
+                e.preventDefault();
+                const categoryName = modalTitle.textContent;
+                const prefillKey = 'formInquiryDefaultCategory';
+                const prefillMessage = (translations[currentLang]?.[prefillKey] || "Saya tertarik dengan kategori: ") + categoryName;
+                smoothScrollToContact(prefillMessage);
+            });
+        }
+        
+        if (productDetailCTA) {
+            productDetailCTA.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productName = productDetailTitle.textContent;
+                const prefillKey = 'formInquiryDefaultProduct';
+                const prefillMessage = (translations[currentLang]?.[prefillKey] || "Saya tertarik dengan produk: ")
+ + productName;
+                smoothScrollToContact(prefillMessage);
+            });
+        }
 
     } // Akhir if (categoryModal && productDetailModal)
 
-    // Smooth scroll navigasi utama (hanya jika elemen homepage ada)
-    // Cek keberadaan elemen #home dan #products sebagai penanda ini homepage
+    // Smooth scroll navigasi utama & LOGIKA SCROLLSPY
     if (document.getElementById('home') && document.getElementById('products')) {
          const navLinks = document.querySelectorAll('.nav-center a, .nav-mobile a, .logo-container, .hero-content .cta-button');
+         const sections = document.querySelectorAll('section[id]');
+         const navLinksDesktop = document.querySelectorAll('.nav-center a[data-section]');
+         const navLinksMobile = document.querySelectorAll('.nav-mobile a[data-section]');
 
-         navLinks.forEach(link => {
-             link.addEventListener('click', function (e) {
-                 const href = this.getAttribute('href');
-
-                 // Hanya handle smooth scroll jika HANYA hash (#) dan bukan hanya '#'
-                 if (href.startsWith('#') && href.length > 1) {
-                     e.preventDefault(); // Mencegah lompatan default & penambahan # ke URL
-                     const targetId = href.substring(1); // Ambil ID tanpa #
-                     const targetElement = document.getElementById(targetId);
-
-                     if (targetElement) {
-                         // Hitung posisi target dengan offset navbar
-                         const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 70; // Ambil tinggi navbar atau default 70px
-                         const elementPosition = targetElement.getBoundingClientRect().top;
-                         const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
-
-                         window.scrollTo({
-                             top: offsetPosition,
-                             behavior: 'smooth'
-                         });
-
-                         // Tutup mobile nav jika terbuka setelah klik link internal
-                         if(navMobile && navMobile.classList.contains('active')) {
-                             navMobile.classList.remove('active');
-                             if (menuToggle) menuToggle.classList.remove('open');
-                         }
-                     }
-                 } else if (href === '#home' || (this.classList.contains('logo-container') && href === '#home')) {
-                     // Khusus link #home atau logo
-                     e.preventDefault();
-                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                      // Tutup mobile nav jika terbuka setelah klik logo/home
+         function handleSmoothScroll(e) {
+             const href = this.getAttribute('href');
+             if (href.startsWith('#') && href.length > 1) {
+                 e.preventDefault();
+                 const targetId = href.substring(1);
+                 const targetElement = document.getElementById(targetId);
+                 if (targetElement) {
+                     const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 70;
+                     const elementPosition = targetElement.getBoundingClientRect().top;
+                     const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+                     window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
                      if(navMobile && navMobile.classList.contains('active')) {
                          navMobile.classList.remove('active');
                          if (menuToggle) menuToggle.classList.remove('open');
                      }
                  }
-                 // Biarkan link eksternal atau ke halaman lain bekerja normal
-             });
+             } else if (href === '#home' || (this.classList.contains('logo-container') && href === '#home')) {
+                 e.preventDefault();
+                 window.scrollTo({ top: 0, behavior: 'smooth' });
+                 if(navMobile && navMobile.classList.contains('active')) {
+                     navMobile.classList.remove('active');
+                     if (menuToggle) menuToggle.classList.remove('open');
+                 }
+             }
+         }
+
+         navLinks.forEach(link => {
+             link.addEventListener('click', handleSmoothScroll);
          });
+
+         function activateNavOnScroll() {
+            const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 70;
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const sectionHeight = section.offsetHeight;
+                if (sectionTop <= (navbarHeight + 1) && (sectionTop + sectionHeight) > (navbarHeight + 1)) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+            if (window.pageYOffset < 200) {
+                 currentSectionId = 'home';
+            }
+            navLinksDesktop.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.section === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+            navLinksMobile.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.section === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+         }
+         
+         window.addEventListener('scroll', activateNavOnScroll);
+         activateNavOnScroll();
+    }
+
+    // AJAX Form Submission
+    const inquiryForm = document.getElementById('inquiryForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitBtn = inquiryForm ? inquiryForm.querySelector('.form-submit-btn') : null;
+
+    if (inquiryForm && formStatus && submitBtn) {
+        
+        inquiryForm.addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+            const formData = new FormData(inquiryForm);
+            const name = formData.get('name').trim();
+            const email = formData.get('email').trim();
+            const phone = formData.get('phone').trim();
+            const message = formData.get('message').trim();
+
+            formStatus.textContent = '';
+            formStatus.className = ''; 
+
+            if (!name || !email || !phone || !message) {
+                formStatus.textContent = translations[currentLang].formErrorRequired;
+                formStatus.classList.add('error');
+                return;
+            }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                formStatus.textContent = translations[currentLang].formErrorEmail;
+                formStatus.classList.add('error');
+                return;
+            }
+
+            try {
+                submitBtn.disabled = true;
+                submitBtn.textContent = translations[currentLang].formSending;
+                const response = await fetch(inquiryForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    formStatus.textContent = translations[currentLang].formSuccess;
+                    formStatus.classList.add('success');
+                    inquiryForm.reset();
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                formStatus.textContent = translations[currentLang].formErrorServer;
+                formStatus.classList.add('error');
+            } finally {
+                submitBtn.disabled = false;
+                const sendKey = submitBtn.getAttribute('data-lang-key');
+                submitBtn.textContent = translations[currentLang][sendKey] || 'Send Message';
+            }
+        });
     }
 
 });

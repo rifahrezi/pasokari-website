@@ -21,10 +21,10 @@
         </a>
       </div>
       <nav class="nav-center">
-        <a href="#home" data-lang-key="navHome">Beranda</a>
-        <a href="#products" data-lang-key="navProducts">Produk</a>
-        <a href="#about" data-lang-key="navAbout">Tentang</a>
-        <a href="#contact" data-lang-key="navContact">Kontak</a>
+        <a href="#home" data-lang-key="navHome" data-section="home">Beranda</a>
+        <a href="#products" data-lang-key="navProducts" data-section="products">Produk</a>
+        <a href="#about" data-lang-key="navAbout" data-section="about">Tentang</a>
+        <a href="#contact" data-lang-key="navContact" data-section="contact">Kontak</a>
       </nav>
       <div class="nav-right">
           <div class="language-switcher">
@@ -43,10 +43,10 @@
           </button>
       </div>
       <nav class="nav-mobile">
-        <a href="#home" data-lang-key="navHome">Beranda</a>
-        <a href="#products" data-lang-key="navProducts">Produk</a>
-        <a href="#about" data-lang-key="navAbout">Tentang</a>
-        <a href="#contact" data-lang-key="navContact">Kontak</a>
+        <a href="#home" data-lang-key="navHome" data-section="home">Beranda</a>
+        <a href="#products" data-lang-key="navProducts" data-section="products">Produk</a>
+        <a href="#about" data-lang-key="navAbout" data-section="about">Tentang</a>
+        <a href="#contact" data-lang-key="navContact" data-section="contact">Kontak</a>
       </nav>
     </header>
 
@@ -138,6 +138,7 @@
                     <div class="form-group">
                          <textarea id="message" name="message" rows="5" required data-lang-key="formMessagePlaceholder" placeholder="Pesan Anda"></textarea>
                     </div>
+                    <div id="formStatus"></div>
                     <button type="submit" class="cta-button form-submit-btn" data-lang-key="formSend">Kirim Pesan</button>
                 </form>
             </div>
@@ -155,9 +156,14 @@
         <h2 id="modalTitle" data-lang-key="categoryVegetables">Nama Kategori</h2> <p id="modalDesc">Deskripsi kategori...</p>
         <hr class="modal-divider" />
         <h3 data-lang-key="modalProductsTitle">Produk Tersedia:</h3>
+        
+        <div class="modal-search-container">
+          <input type="search" id="modalSearchInput" data-lang-key="modalSearchPlaceholder" placeholder="Cari produk di kategori ini...">
+        </div>
+        
         <div id="modalProductList" class="modal-product-grid">
             </div>
-        <a href="#contact" class="cta-button modal-cta" data-lang-key="modalCTA">Minta Penawaran untuk Kategori Ini</a>
+        <a href="#contact" class="cta-button modal-cta" id="categoryModalCTA" data-lang-key="modalCTA">Minta Penawaran untuk Kategori Ini</a>
       </div>
     </div>
 
@@ -166,7 +172,7 @@
             <span id="productDetailClose" class="close-btn">&times;</span>
             <img src="" alt="Detail Produk" id="productDetailImage">
             <h3 id="productDetailTitle">Nama Produk Detail</h3>
-            <a href="#contact" class="cta-button modal-cta" data-lang-key="productDetailCTA">Minta Penawaran Produk Ini</a>
+            <a href="#contact" class="cta-button modal-cta" id="productDetailModalCTA" data-lang-key="productDetailCTA">Minta Penawaran Produk Ini</a>
         </div>
     </div>
 
